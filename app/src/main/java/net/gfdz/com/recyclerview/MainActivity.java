@@ -22,7 +22,10 @@ public class MainActivity extends AppCompatActivity {
         initView();
         mAdapter=new SimplerAdapter(this,mDatas);
         mRecyclerView.setAdapter(mAdapter);
+        //设置ReycilerView的布局管理
         mRecyclerView.setLayoutManager(new LinearLayoutManager(this, LinearLayoutManager.VERTICAL,false));
+        //设置ReycilerView的item间分割线
+        mRecyclerView.addItemDecoration(new DividerItemDecoration(this,DividerItemDecoration.VERTICAL_LIST));
 
     }
 
